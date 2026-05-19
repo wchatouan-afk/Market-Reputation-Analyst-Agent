@@ -155,7 +155,14 @@ Used to validate the full pipeline from Step 1 input (directory path) to Step 1 
 ---
 
 ## Project Journal - Step 2 (08.05)
-*(Ajoute ici le contenu que je t'ai donné dans le message précédent sur l'implémentation, les concepts et l'intégration des outils)*
+The system has transitioned from a theoretical model to a modular implementation. 
+- **Refined Concepts**: We integrated AST (Abstract Syntax Tree) parsing for semantic code analysis and Pydantic models for strict data validation between tools.
+- **Application**: The `SourceCodeReader` now uses AST parsing to extract function and class signatures without executing code, ensuring the AI receives clean, relevant metadata. 
+- **Integration**: Tools are orchestrated via a centralized registry. The `main.py` controller manages the ReAct loop, where the agent’s reasoning drives tool selection, and tool outputs are validated against Pydantic schemas before being committed to the Project Manifest.
 
 ## Step 3 & Final (15.05 - 22.05)
-*(Ajoute ici le contenu sur les tests, la stratégie de déploiement et la conclusion finale)*
+- **Testing Process**: A `pytest` suite was implemented to perform unit tests on individual tools and integration tests on the full "Code-to-Doc" pipeline. 
+- **Deployment**: Packaged as a CLI application with a `requirements.txt` manifest.
+- **Data Porting**: Raw code files are transformed into standardized JSON schemas to ensure consistency across the toolchain.
+- **Deployment Strategy**: A staged release approach is proposed, starting with local CLI execution to verify output quality before CI/CD integration.
+- **Conclusion**: The Auto-Doc Agent successfully automates technical documentation, reducing documentation debt while maintaining a direct, traceable link between source code and generated reference guides.
