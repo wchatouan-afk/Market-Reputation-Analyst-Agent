@@ -150,3 +150,12 @@ Used to validate the full pipeline from Step 1 input (directory path) to Step 1 
 - the LLM correctly orchestrates tools (Step 2),
 - tools return valid structured outputs (Step 3),
 - and the final documentation matches the expected format (Step 1).
+
+
+---
+
+## Project Journal - Step 2 (08.05)
+*(Ajoute ici le contenu que je t'ai donné dans le message précédent sur l'implémentation, les concepts et l'intégration des outils)*
+
+## Step 3 & Final (15.05 - 22.05)
+*(Ajoute ici le contenu sur les tests, la stratégie de déploiement et la conclusion finale)*
